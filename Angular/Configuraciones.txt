@@ -21,11 +21,11 @@ PASOS PARA TRABAJAR CON ANGULAR
 
 7.Comando para crear componente:
 	
-	ng generate componente nombreCarpeta/nombreComponente
+	ng generate component nombreCarpeta/nombreComponente
 
-8.Comando para crear un servicio de data:
+8.Comando para crear un servicio para data artificial:
 	
-	ng generate service nombreCarpetaServicio/nombreServicio
+	ng generate service service/nombreServicio
 
 ------------------------------------------------
 Extenciones:
