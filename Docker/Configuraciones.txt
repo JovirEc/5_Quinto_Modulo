@@ -1,0 +1,66 @@
+1.Ingresar a https://www.docker.com/
+2.Descargar Docker for Windows
+3.Instalar y tildar la opción de instalar WSL
+
+----------------------------
+4.Ver la versión de Docker:
+	docker -v
+
+5.Ver las imágenes que tengo ya descargadas:
+	docker images
+
+6.Buscar una imagen en internet:
+	docker search hola-mundo
+
+7.Descargar una imagen de internet:
+	docker pull hola-mundo
+
+8.Ver los contenedores que tengo activos:
+	docker ps
+
+	8.1 Ver los contenedores activos o finalizados:
+		docker -ps a
+
+9.Levantar un nuevo contenedor docker
+	docker run -it hola-mundo
+
+10.Eliminar un contenedor:
+	docker container rm hola-mundo
+
+11.Correr un contenedor detenido:
+	docker start hola-mundo
+
+------------------------------------
+BASE DE DATOS
+1.Buscar en el terminal:  
+	docker search postgres
+
+2.Descargar con:
+	docker pull postgres
+
+3.Correr la imagen:
+	docker run --name miserverdb -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=mibasedatos -p 5432:5432 -d postgres
+
+
+------ CREAR UNA BASE DE DATOS
+4.Buscar la imagen para base de datos (no oficial)
+	docker search dpage/pgadmin4
+
+5.Descargar la imagen
+	docker pull dpage/pgadmin4
+
+6.Correr la imagen (mientras la anterior imagen en el paso 3 aún sigue corriendo)
+	docker run --name mipgadmin -e PGADMIN_DEFAULT_EMAIL=jovirodriguezgye@gmail.com -e PGADMIN_DEFAULT_PASSWORD=admin -p 8082:80 -d dpage/pgadmin4
+
+7.Revisar la dirección ip en la que está mi server
+	docker inspect miserverdb
+	Ir hasta el final y revisar el que diga Adrress o Gateway
+
+--------CONECTAR MI BASE DE DATOS CONFIGURACION
+8.Crear nuevo en el botón que aparece en el centro.
+9.En GENERAL colocar en Name: el nombre cualquiera de la base de datos
+10.En CONNECTION colocar en HOST: la dirección ip que nos salió en el paso 7.
+	En PORT colocar el puerto que nos indica en el contenedor de Docker
+	En Maintenance database dejar con postgres
+	En Username colocar el usuario ingresado en el paso 3
+	En Password colocar la pass ingresada en el paso 3
