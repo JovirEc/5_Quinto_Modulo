@@ -1,0 +1,35 @@
+PASOS PARA TRABAJAR CON ANGULAR
+
+1.Instalar node js el paquete instalable LTS
+2.Ejecutar el comando: 
+	npm install -g @angular/cli
+
+-----------------------------------------------
+3.Crear un nuevo proyecto:
+
+	ng new nombreDelProyecto
+
+5.Seleccionar CSS
+4.Solo dar enter para usar opciones por defecto.
+5.Comando para iniciar el proyecto por primera vez:
+
+	npm start
+
+6.Comando para volver a iniciar proyecto
+	
+	ng serve
+
+7.Comando para crear componente:
+	
+	ng generate componente nombreCarpeta/nombreComponente
+
+8.Comando para crear un servicio de data:
+	
+	ng generate service nombreCarpetaServicio/nombreServicio
+
+------------------------------------------------
+Extenciones:
+-Angular Language Service - Angular
+-Angular Snippets - John Papa
+-Auto Close Tag - Jun Han
+-Material Icon Theme - Philipp Kief
