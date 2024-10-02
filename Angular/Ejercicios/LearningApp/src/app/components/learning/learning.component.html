@@ -1,31 +1,35 @@
-<div>
-    <div>
-        <h2>APP LEARNING</h2>
+<div class="container">
+    <div class="card">
         <div>
-            <ul>
-                <li>CURSO: {{course.name}}</li>
-                <li>ID: {{course.id}}</li>
-            </ul>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <th>ID</th>
-                    <th>IDENTIFICADOR</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                </thead>
-                <tbody>
-                    @for (item of course.students; track $index) {
-                    <tr>
-                        <td>{{item.id}}</td>
-                        <td>{{item.identification}}</td>
-                        <td>{{item.name}}</td>
-                        <td>{{item.surname}}</td>
-                    </tr>
-                    }
-                </tbody>
-            </table>
+            <h2 class="card-header">APP LEARNING</h2>
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item">CURSO: {{course.name}}</li>
+                    <li class="list-group-item">ID: {{course.id}}</li>
+                </ul>
+            </div>
+            <div>
+                <div class="p-3">
+                    <table class="table">
+                        <thead>
+                            <th>ID</th>
+                            <th>IDENTIFICADOR</th>
+                            <th>NOMBRE</th>
+                            <th>APELLIDO</th>
+                        </thead>
+                        <tbody>
+                            @for (item of course.students; track $index) {
+                            <tr>
+                                <td>{{item.id}}</td>
+                                <td>{{item.identification}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.surname}}</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
