@@ -1,0 +1,14 @@
+<table class="table table-hover">
+    <thead>
+        <th>ID</th>
+        <th>IDENTIFICADOR</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+    </thead>
+    <tbody>
+        @for (item of estudiantesView; track $index) {
+        <tr estudiante-view [estudianteView]="item">
+        </tr>
+        }
+    </tbody>
+</table>

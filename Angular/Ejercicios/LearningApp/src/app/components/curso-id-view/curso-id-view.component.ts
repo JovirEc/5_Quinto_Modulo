@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 import { Course } from '../../model/Course';
 
 @Component({
-  selector: 'curso-item',
+  selector: 'curso-id-view',
   standalone: true,
   imports: [],
-  templateUrl: './curso-item.component.html',
+  templateUrl: './curso-id-view.component.html',
 })
-export class CursoItemComponent {
-  @Input() course!:Course
+export class CursoIdViewComponent {
+  @Input()courseId!:Course
 }

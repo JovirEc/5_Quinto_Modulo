@@ -7,31 +7,12 @@
                     <curso-name-view [courseName]="course"></curso-name-view>
                 </div>
                 <div class="col">
-                    <ul class="list-group">
-                        <li class="list-group-item">ID: {{course.id}}</li>
-                    </ul>
+                    <curso-id-view [courseId]="course"></curso-id-view>
                 </div>
             </div>
             <div>
                 <div class="p-3">
-                    <table class="table table-hover">
-                        <thead>
-                            <th>ID</th>
-                            <th>IDENTIFICADOR</th>
-                            <th>NOMBRE</th>
-                            <th>APELLIDO</th>
-                        </thead>
-                        <tbody>
-                            @for (item of course.students; track $index) {
-                            <tr>
-                                <td>{{item.id}}</td>
-                                <td>{{item.identification}}</td>
-                                <td>{{item.name}}</td>
-                                <td>{{item.surname}}</td>
-                            </tr>
-                            }
-                        </tbody>
-                    </table>
+                    <estudiantes-view [estudiantesView]="course.students"></estudiantes-view>
                 </div>
             </div>
         </div>
