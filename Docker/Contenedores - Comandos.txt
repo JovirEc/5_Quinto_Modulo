@@ -1,0 +1,38 @@
+1.Crear un contenedor en modo iterativo:
+
+	-Docker run -it --name ubuntu-server01 jovirec/mi-primer-imagen:v1.0 /bin/bash
+
+2. Escribir comandos tests:
+	uname (debería aparecer "Linux")
+	hostname (debería aparecer una serie de caracteres de 10 mas o menos)
+	ping google.com (por ejemplo "google.com" me debería mostrar el ping)
+	telnet <ip que salió> 80
+	curl http://google.com (si colocas con el "www" aparecerá otra cosa)
+
+3. Crear contenedor en modo segundo plano
+
+	Docker run -d --name mi-primer-contenedor jovirec/mi-primera-imagen:v1.0
+
+4. Detener contenedor:
+	
+	Docker container stop <container id> (el id, no el nombre)(puede ser solo los 4 primeros dígitos)
+	
+	(también se puede unir varios contenedores con una coma y espacio: ej.: Docker container stop 458d, d548, d48)
+
+5. Eliminar contenedor:
+
+	docker container rm <container id>
+	
+	(también se puede unir varios contenedores con una coma y espacio: ej.: Docker container stop 458d, d548, d48
+
+6. Inspeccionar un contenedor (network, etc)
+
+	docker inspect <id contenedor>	
+
+	Para poder hacer ping, tomar el que dice IPAdress
+
+7. En caso de no tener instalado la opción de ping o telnet, utilizar los siguientes comandos:
+	apt-get update - Para actualizar
+	apt-get upgrade - Para actualizar
+	apt-get install iputils-ping - Para instalar ping
+	apt-get install telnetd

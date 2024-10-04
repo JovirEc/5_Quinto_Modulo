@@ -10,7 +10,7 @@
 	UN apt-get install -y curl
 	UN apt-get install -y iputils-ping
 	UN apt-get install -y telnet
-	MD ["tail", "-f", "/dev/null"]
+	CMD ["tail", "-f", "/dev/null"]
 
 
 3.En CMD o Docker Terminal ingresamos a la carpeta donde se encuentra el archivo y escribimos el siguiente comando:
