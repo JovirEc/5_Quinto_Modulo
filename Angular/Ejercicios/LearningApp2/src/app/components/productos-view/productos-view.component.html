@@ -1,0 +1,15 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>INSTRUMENTO</th>
+            <th>MARCA</th>
+            <th>FAMILIA</th>
+            <th>PRECIO</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (itemP of productos; track $index) {
+        <tr items-pro-view [items]="itemP"></tr>
+        }
+    </tbody>
+</table>
